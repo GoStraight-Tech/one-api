@@ -79,9 +79,6 @@ func responseAIProxyLibrary2OpenAI(response *AIProxyLibraryResponse) *OpenAIText
 		FinishReason: "stop",
 	}
 	fullTextResponse := OpenAITextResponse{
-		Id:      common.GetUUID(),
-		Object:  "chat.completion",
-		Created: common.GetTimestamp(),
 		Choices: []OpenAITextResponseChoice{choice},
 	}
 	return &fullTextResponse
